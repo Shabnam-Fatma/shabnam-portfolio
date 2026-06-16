@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.85rem;
+    --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-mono: "Space Mono", ui-monospace, monospace;
+    --background: 220 13% 93%;
+    --foreground: 240 9% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 9% 12%;
+    --primary: 248 74% 63%;
+    --primary-foreground: 0 0% 100%;
+    --muted: 220 13% 93%;
+    --muted-foreground: 240 4% 36%;
+    --border: 240 6% 85%;
+    --input: 240 6% 85%;
+    --ring: 248 74% 63%;
+  }
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-canvas text-ink font-sans antialiased; overflow-x: hidden; }
+  ::selection { background: #6C5CE7; color: #fff; }
+  section { scroll-margin-top: 5rem; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+}
+
+@layer components {
+  .tile {
+    @apply rounded-tile p-6 transition-all duration-300 ease-out;
+  }
+  .tile-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px -22px rgba(0,0,0,0.4);
+  }
+  .klabel { @apply font-mono text-[12px] font-medium; }
+}
