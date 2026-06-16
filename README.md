@@ -14,12 +14,6 @@ npm run dev      # http://localhost:3000
 npm run build    # outputs static site to ./out
 ```
 
-## Deploy
-**GitHub Pages:** push to your repo's `main`, then Settings → Pages → Source: **GitHub Actions** (workflow included). For a project repo, set `basePath`/`assetPrefix` in `next.config.mjs`.
-**Vercel:** import the repo — autodetected, no config.
-
-## Edit your content
-Everything is in **`data/site.ts`** — profile, skills, projects, experience, education.
 
 ### ✅ Before publishing
 1. **Email** — `data/site.ts` → `profile.email` is a placeholder. Add your real email.
